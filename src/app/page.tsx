@@ -1,4 +1,25 @@
-export default function Home() {
+// =============================================================================
+// File Name: Home Page
+// File Description:
+// this file contains the code of the Home Page.
+// =============================================================================
+// =============================================================================
+// Page Imports
+// =============================================================================
+import { SubjectBtn } from "@/ui/subjectBtn"
+import iconHtml from "../../public/images/icon-html.svg"
+import iconCss from "../../public/images/icon-css.svg"
+import iconJs from "../../public/images/icon-js.svg"
+import iconAccessibility from "../../public/images/icon-accessibility.svg"
+
+// =============================================================================
+// Page Props
+// =============================================================================
+
+// =============================================================================
+// Page Component
+// =============================================================================
+export default function HomePage() {
   return (
     <div className="">
       {/* Quiz menu start */}
@@ -6,34 +27,12 @@ export default function Home() {
       Welcome to the Frontend Quiz!
       Pick a subject to get started.
 
-      HTML
-      CSS
-      JavaScript
-      Accessibility
+      <SubjectBtn icon={iconHtml} text={'HTML'} href={'#'}/>
+      <SubjectBtn icon={iconCss} text={'CSS'} href={'#'}/>
+      <SubjectBtn icon={iconJs} text={'JavaScript'} href={'#'}/>
+      <SubjectBtn icon={iconAccessibility} text={'Accessibility'} href={'#'}/>
 
       {/* Quiz menu end */}
-
-      {/* Quiz question start */}
-
-      Question 1 of 10
-
-      A
-      B
-      C
-      D
-
-      Submit answer
-
-      {/* Quiz question end */}
-
-      {/* Quiz completed start */}
-
-      Quiz completed
-      You scored...
-
-      8 out of 10
-
-      {/* Quiz completed end */}
     </div>
   );
 }
