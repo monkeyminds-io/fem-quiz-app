@@ -1,30 +1,33 @@
 // =============================================================================
-// File Name: Subject Button Component
+// File Name: Pirmary Button
 // File Description:
-// This file contains the code of the Subject Button Component, used to select 
-// the subjet of the quiz.
+// This file contains the code for the Primary Button Component.
 // =============================================================================
 // =============================================================================
 // Components Imports
 // =============================================================================
-import Image from "next/image";
+// import { ReactNode } from 'react'
+import { MouseEventHandler } from 'react';
 
 // =============================================================================
 // Components Props
 // =============================================================================
 type Props = {
-    icon: string;
-    text: string;
-    href: string;
-}
+  type: 'button' | 'submit' | 'reset' | undefined;
+  text: string;
+  action: MouseEventHandler<HTMLButtonElement>;
+};
 // =============================================================================
 // React Components
 // =============================================================================
-export const SubjectBtn = ({icon, text, href}: Props) => {
-    return (
-        <a href={href}>
-            <Image src={icon} alt="Decoration" />
-            {text}
-            </a>
-    )
-}
+export const PrimaryButton = ({ type = 'button', text, action }: Props) => {
+  return (
+    <button
+      type={type}
+      onClick={action}
+      className='mb-2 me-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-light focus:outline-none focus:ring-4 focus:ring-primary'
+    >
+      {text}
+    </button>
+  );
+};
