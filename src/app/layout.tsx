@@ -13,11 +13,6 @@ import './globals.css';
 // =============================================================================
 // Local Fonts
 // =============================================================================
-// const rubikItalic = localFont({
-//   src: "./fonts/Rubik-Italic-VariableFont_wght.ttf",
-//   weight: "400"
-// });
-
 const rubikNormal = localFont({
   src: './fonts/Rubik-VariableFont_wght.ttf',
   weight: '400 700',
@@ -50,7 +45,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${rubikNormal} bg-gray-200 bg-mobile-light bg-no-repeat antialiased`}
+        className={`${rubikNormal} bg-gray-200 bg-mobile-light bg-no-repeat text-black antialiased md:bg-tablet-light lg:bg-desktop-light`}
       >
         {children}
       </body>

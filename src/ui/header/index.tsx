@@ -19,16 +19,17 @@ import iconAccessibility from '../../../public/icon-accessibility.svg';
 // Components Props
 // =============================================================================
 type Props = {
-  hasTitle: boolean;
+  hasTitle?: boolean;
+  subject?: string;
 };
 // =============================================================================
 // React Components
 // =============================================================================
-export const Header = ({ hasTitle = false }: Props) => {
+export const Header = ({ hasTitle = false, subject = '' }: Props) => {
   return (
     <header
       className={clsx(
-        'flex flex-row items-center px-6 py-4',
+        'flex flex-row items-center mx-auto px-6 py-4 w-full max-w-desktop md:px-16 md:pt-10 md:pb-0 lg:px-40 lg:pt-20',
         hasTitle ? 'justify-between' : 'justify-end'
       )}
     >
@@ -37,11 +38,13 @@ export const Header = ({ hasTitle = false }: Props) => {
           hasTitle ? 'flex flex-row items-center gap-6' : 'hidden'
         )}
       >
-        <div className='flex h-10 w-10 items-center justify-center rounded-lg bg-primary-lighter'>
+        <div
+          className={`flex h-10 w-10 items-center justify-center rounded-lg bg-subject-${subject}`}
+        >
           <Image
             src={iconAccessibility}
             alt={'decorative'}
-            className='w-7 h-7'
+            className='h-7 w-7'
           />
         </div>
         <h1 className='text-xl font-medium'>Accessibility</h1>
