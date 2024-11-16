@@ -26,12 +26,7 @@ export const SubjectButton = ({ subject, icon, text, action }: Props) => {
   return (
     <a
       href={action}
-      className={clsx('flex flex-row items-center gap-4 rounded-xl bg-white p-3 shadow-button transition-colors duration-300 ease-in-out text-card md:text-card-lg font-medium',
-        subject === 'html' ? 'hover:bg-subject-html' : '',
-        subject === 'css' ? 'hover:bg-subject-css' : '',
-          subject === 'js' ? 'hover:bg-subject-js' : '',
-          subject === 'accessibility' ? 'hover:bg-subject-accessibility' : ''
-      )}
+      className='flex flex-row items-center gap-4 rounded-xl bg-white p-3 text-card font-medium shadow-button transition-all duration-300 ease-in-out hover:ring-4 hover:ring-primary md:text-card-lg dark:bg-gray-800'
     >
       <div
         className={clsx(

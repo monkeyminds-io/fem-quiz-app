@@ -45,7 +45,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${rubikNormal} bg-gray-200 bg-mobile-light bg-no-repeat text-black antialiased md:bg-tablet-light lg:bg-desktop-light`}
+        className={`${rubikNormal} bg-gray-200 bg-mobile-light bg-no-repeat text-black antialiased md:bg-tablet-light lg:bg-desktop-light dark:bg-black dark:bg-mobile-dark dark:text-white md:dark:bg-tablet-dark lg:dark:bg-desktop-dark`}
       >
         {children}
       </body>

@@ -2,6 +2,7 @@ import type { Config } from 'tailwindcss';
 
 export default {
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
+  darkMode: 'class',
   theme: {
     fontSize: {
       h1: ['2.5rem', '100%'],
@@ -9,7 +10,7 @@ export default {
       copy: ['0.875rem', '150%'],
       'copy-lg': ['1.25rem', '150%'],
       card: ['1.25rem', '150%'],
-      'card-lg': ['1.75rem', '150%']
+      'card-lg': ['1.75rem', '150%'],
     },
     extend: {
       width: {

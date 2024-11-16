@@ -26,17 +26,17 @@ export default function HomePage() {
       <Header />
 
       {/* Main */}
-      <main className='flex flex-col gap-10 mx-auto px-6 py-8 w-full max-w-desktop md:gap-16 md:px-16 lg:flex-row lg:px-40 lg:py-20'>
+      <main className='max-w-desktop mx-auto flex w-full flex-col gap-10 px-6 py-8 md:gap-16 md:px-16 lg:flex-row lg:px-40 lg:py-20'>
         {/* Quiz menu start */}
-        <div className='flex flex-col gap-4 w-full'>
-          <h1 className='w-full max-w-[283px] text-h1 font-light md:text-h1-lg md:max-w-[453px]'>
+        <div className='flex w-full flex-col gap-4'>
+          <h1 className='w-full max-w-[283px] text-h1 font-light md:max-w-[453px] md:text-h1-lg'>
             Welcome to the <span className='font-bold'>Frontend Quiz!</span>
           </h1>
           <p className='text-copy italic md:text-copy-lg'>
             Pick a subject to get started.
           </p>
         </div>
-        <div className='flex flex-col gap-3 w-full'>
+        <div className='flex w-full flex-col gap-3'>
           <SubjectButton
             subject={'html'}
             icon={iconHtml}
