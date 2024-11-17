@@ -89,8 +89,8 @@ export const Header = ({
           <h1 className='text-xl font-medium'>Accessibility</h1>
         </div>
       )}
-      <div className='flex h-10 flex-row gap-2'>
-        <Image src={sunIcon} alt={'Decoration'} />
+      <div className='flex h-10 flex-row items-center gap-2'>
+        <Image src={sunIcon} alt={'Decoration'} className='w-4 h-4 md:w-6 md:h-6'/>
         <label className='inline-flex cursor-pointer items-center'>
           <input
             id='theme-toggle'
@@ -98,9 +98,9 @@ export const Header = ({
             value='dark-theme'
             className='peer sr-only'
           />
-          <div className="peer relative h-5 w-8 rounded-full bg-primary after:absolute after:start-1 after:top-1 after:h-3 after:w-3 after:rounded-full after:bg-white after:transition-all after:content-[''] peer-checked:after:translate-x-full peer-focus:outline-none rtl:peer-checked:after:-translate-x-full"></div>
+          <div className="peer relative h-5 w-8 rounded-full bg-primary after:absolute after:start-1 after:top-1 after:h-3 after:w-3 after:rounded-full after:bg-white after:transition-all after:content-[''] peer-checked:after:translate-x-full peer-focus:outline-none rtl:peer-checked:after:-translate-x-full md:w-12 md:h-7 md:after:w-5 md:after:h-5"></div>
         </label>
-        <Image src={moonIcon} alt={'Decortion'} />
+        <Image src={moonIcon} alt={'Decortion'} className='w-4 h-4 md:w-6 md:h-6'/>
       </div>
     </header>
   );
