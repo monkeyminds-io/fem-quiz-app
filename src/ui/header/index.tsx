@@ -50,26 +50,26 @@ export const Header = ({
   };
 
   useEffect(() => {
+    // Set click event on Theme Toggle
+    const themeToggle: HTMLElement | null =
+    document.getElementById('theme-toggle');
+    if (themeToggle) {
+        themeToggle.onclick = () => {
+          const theme = localStorage.getItem('color-theme');
+          if (theme) theme === 'light' ? setDarkTheme() : setLightTheme();
+          else
+          document.documentElement.classList.contains('dark')
+        ? setLightTheme()
+        : setDarkTheme();
+      };
+    }
+  
     // Setting theme based on previous settings
     const hasThemeSettings =
       localStorage.getItem('color-theme') === 'dark' ||
       (!('color-theme' in localStorage) &&
         window.matchMedia('(prefers-color-scheme: dark)').matches);
-    hasThemeSettings ? setDarkTheme() : setLightTheme();
-
-    // Set click event on Theme Toggle
-    const themeToggle: HTMLElement | null =
-      document.getElementById('theme-toggle');
-    if (themeToggle) {
-      themeToggle.onclick = () => {
-        const theme = localStorage.getItem('color-theme');
-        if (theme) theme === 'light' ? setDarkTheme() : setLightTheme();
-        else
-          document.documentElement.classList.contains('dark')
-            ? setLightTheme()
-            : setDarkTheme();
-      };
-    }
+    hasThemeSettings ? themeToggle?.click() : setLightTheme();
   }, []);
 
   return (
