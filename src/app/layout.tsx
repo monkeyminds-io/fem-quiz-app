@@ -9,6 +9,7 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
+import { Header } from '@/ui/header';
 
 // =============================================================================
 // Local Fonts
@@ -45,8 +46,9 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${rubikNormal} bg-gray-200 bg-mobile-light bg-no-repeat text-black antialiased transition-all duration-300 ease-in-out md:bg-tablet-light lg:bg-desktop-light dark:bg-black dark:bg-mobile-dark dark:text-white md:dark:bg-tablet-dark lg:dark:bg-desktop-dark`}
+        className={`${rubikNormal} bg-gray-200 bg-mobile-light bg-no-repeat text-black antialiased transition-all duration-300 ease-in-out dark:bg-black dark:bg-mobile-dark dark:text-white md:bg-tablet-light md:dark:bg-tablet-dark lg:bg-desktop-light lg:dark:bg-desktop-dark`}
       >
+        <Header />
         {children}
       </body>
     </html>

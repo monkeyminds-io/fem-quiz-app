@@ -26,7 +26,7 @@ export const SubjectButton = ({ subject, icon, text, action }: Props) => {
   return (
     <a
       href={action}
-      className='flex flex-row items-center gap-4 rounded-xl bg-white p-3 text-card font-medium shadow-button transition-all duration-300 ease-in-out hover:ring-4 hover:ring-primary md:text-card-lg dark:bg-gray-800'
+      className='flex flex-row items-center gap-4 rounded-xl bg-white p-3 text-card font-medium shadow-button transition-all duration-300 ease-in-out hover:ring-4 hover:ring-primary-light dark:bg-gray-800 md:text-card-lg'
     >
       <div
         className={clsx(

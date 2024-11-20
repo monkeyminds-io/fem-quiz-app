@@ -7,10 +7,14 @@ export default {
     fontSize: {
       h1: ['2.5rem', '100%'],
       'h1-lg': ['4rem', '100%'],
+      question: ['1.25rem', '120%'],
+      'question-lg': ['2.25rem', '120%'],
       copy: ['0.875rem', '150%'],
       'copy-lg': ['1.25rem', '150%'],
       card: ['1.25rem', '150%'],
       'card-lg': ['1.75rem', '150%'],
+      'copy-large': ['1.125rem', '100%'],
+      'copy-large-lg': ['1.75rem', '100%'],
     },
     extend: {
       width: {
@@ -18,8 +22,10 @@ export default {
       },
       colors: {
         primary: {
+          dark: '#830CCE',
           DEFAULT: '#A729F5',
           light: '#D394FA',
+          lighter: '#F6E7FF',
         },
         black: '#313E51',
         white: '#FFFFFF',
